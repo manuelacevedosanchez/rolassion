@@ -6,16 +6,19 @@ const plantas = {
   19: "Lúpulo", 20: "Digitalis"
 };
 
-function lanzarDados() {
-  const numDados = parseInt(document.getElementById("numDados").value);
-  const carasDado = parseInt(document.getElementById("carasDado").value);
+function lanzar() {
+  const numDias = parseInt(document.getElementById("numDias").value);
+  const carasPlanta = parseInt(document.getElementById("carasPlanta").value);
+  const carasCantidad = parseInt(document.getElementById("carasCantidad").value);
   const resultadosDiv = document.getElementById("resultados");
 
   let resultados = "";
-  for (let i = 1; i <= numDados; i++) {
-    const tirada = Math.floor(Math.random() * carasDado) + 1;
-    const nombre = (carasDado === 20 && plantas[tirada]) ? plantas[tirada] : "";
-    resultados += `Dado ${i}: ${tirada} ${nombre ? "- " + nombre : ""}\n`;
+  for (let i = 1; i <= numDias; i++) {
+    const plantaTirada = Math.floor(Math.random() * carasPlanta) + 1;
+    const cantidadTirada = Math.floor(Math.random() * carasCantidad) + 1;
+    const nombrePlanta = (carasPlanta === 20 && plantas[plantaTirada]) ? plantas[plantaTirada] : `Planta ${plantaTirada}`;
+
+    resultados += `Día ${i}: ${cantidadTirada} x ${nombrePlanta}\n`;
   }
 
   resultadosDiv.textContent = resultados;
