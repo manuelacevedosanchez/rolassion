@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+  padding: 1em;
+  background: #f0f0f0;
+}
+label, select, input {
+  margin-right: 1em;
+}
+button {
+  padding: 0.5em 1em;
+}
+#resultados {
+  margin-top: 1em;
+  white-space: pre-line;
+}
