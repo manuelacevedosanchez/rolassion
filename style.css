@@ -12,4 +12,8 @@ button {
 #resultados {
   margin-top: 1em;
   white-space: pre-line;
+  background: #fff;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }

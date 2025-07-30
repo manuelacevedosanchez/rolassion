@@ -16,10 +16,13 @@ function lanzar() {
   for (let i = 1; i <= numDias; i++) {
     const plantaTirada = Math.floor(Math.random() * carasPlanta) + 1;
     const cantidadTirada = Math.floor(Math.random() * carasCantidad) + 1;
-    const nombrePlanta = (carasPlanta === 20 && plantas[plantaTirada]) ? plantas[plantaTirada] : `Planta ${plantaTirada}`;
-
+    const nombrePlanta = plantas[plantaTirada] || `Planta ${plantaTirada}`;
     resultados += `Día ${i}: ${cantidadTirada} x ${nombrePlanta}\n`;
   }
 
   resultadosDiv.textContent = resultados;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("botonLanzar").addEventListener("click", lanzar);
+});
