@@ -1,19 +1,27 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Georgia', serif;
   padding: 1em;
-  background: #f0f0f0;
+  background: #e8e4d8;
 }
 label, select, input {
   margin-right: 1em;
 }
 button {
   padding: 0.5em 1em;
+  background-color: #553c1c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #7a522f;
 }
 #resultados {
   margin-top: 1em;
   white-space: pre-line;
-  background: #fff;
+  background: #fff8e1;
   padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 2px solid #c0a77e;
+  border-radius: 8px;
 }

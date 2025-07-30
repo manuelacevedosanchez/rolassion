@@ -22,7 +22,3 @@ function lanzar() {
 
   resultadosDiv.textContent = resultados;
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("botonLanzar").addEventListener("click", lanzar);
-});
